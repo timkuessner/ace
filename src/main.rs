@@ -1,7 +1,9 @@
+use ace::world::World;
+
 fn main() {
-    let tick = 100;
-    
-    for t in 0..tick {
-        println!("Tick: {}", t);
-    }
+    let tick: u32 = 100;
+    let mut world = World::new();
+    world.init();
+    world.run(tick);
+    world.report();
 }
